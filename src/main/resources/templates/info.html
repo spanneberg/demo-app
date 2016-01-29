@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head>
+    <title>Demo app information page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.5/css/bootstrap.min.css"
+      th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+      rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div class="container">
+    <h1>Host properties</h1>
+    <table class="table">
+	    <thead>
+	      <th>Attribute</th>
+	      <th>Value</th>
+	    </thead>
+	    <tr>
+	      <td>Hostname</td><td th:text="${hostname}">hostname</td>
+	    </tr>
+	    <tr>
+        <td>Application name</td><td th:text="${appName}">appName</td>
+      </tr>
+      <tr>
+        <td>Application version</td><td th:text="${appVersion}">appVersion</td>
+      </tr>
+	  </table>
+  </div>
+</body>
+</html>
