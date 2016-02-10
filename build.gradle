@@ -8,7 +8,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 version = '0.0.3'
@@ -18,8 +17,8 @@ jar {
     version =  project.version
 	
 	manifest.attributes (
-		"Application-Name"    : project.name,
-		"Application-Version" : project.version
+		'appName'    : project.name,
+		'appVersion' : project.version
 	)
 }
 

@@ -16,8 +16,8 @@ public class InfoController {
     @RequestMapping("/info")
     public String info(Model model) throws UnknownHostException, SocketException {
         String hostname = InetAddress.getLocalHost().getHostName();
-        String appName = Manifests.read("Application-Name");
-        String appVersion = Manifests.read("Application-Version");
+        String appName = Manifests.read("appName");
+        String appVersion = Manifests.read("appVersion");
         model.addAttribute("hostname", hostname);
         model.addAttribute("appName", appName);
         model.addAttribute("appVersion", appVersion);
